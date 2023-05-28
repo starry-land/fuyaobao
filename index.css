@@ -1,0 +1,101 @@
+@import url('base.css');
+
+:root {
+    --text: #000;
+    --bg: #ffffff;
+    --bg50: #ffffff80;
+    --bg70: #ffffff80;
+    --sd: #33333370;
+    --card: #efefef55;
+    --hover: #ffffff65;
+    --hover-half: #ffffff40;
+    --hover-b: #1111110f;
+    --bggrey: #ddd;
+    --fill:#d3d3d370;
+    --bgul: url('bg.svg');
+    --mm: #ffffffc0;
+    --cm: #fafafabb;
+    --bar: #efefef37;
+    --hr:#00000013;
+    --unfoc:#e6e6e6;
+    --theme-1:#ad6eca;
+    --theme-2:#3b91d8;
+    --href:#2983cc;
+    --bd:#8f8f8f30;
+    --s3d:#99999940;
+}
+
+html{
+    /* height: calc(var(--ph) * 2); */
+}
+
+#title{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 450px;
+    display: block;
+    margin-left: -225px;
+    transition: 100ms;
+}
+
+#title>*{
+    position: absolute;
+    display: block;
+}
+
+#title>.fu{
+    height:180px;
+    top: 0;
+    left: 0;
+    fill: #1f3a3a;
+}
+#title>.yao{
+    height:240px;
+    top: 20px;
+    left: 120px;
+    fill: #3f4720;
+}
+#title>.bao{
+    height:130px;
+    top: 60px;
+    left: 300px;
+    fill: #222;
+}
+
+#info {
+    border-radius: 10px;
+    background-color: #fafafa;
+    /* backdrop-filter: blur(20px) saturate(1.5);
+    -webkit-backdrop-filter: blur(20px) saturate(1.5); */
+    box-shadow: 0 1px 2px #44444440, 0px 3px 20px 1px #33333370;
+    padding: 7px 6px;
+    position: absolute;
+    top: var(--ph);
+    width: calc(100% - 100px);
+    left: 50px;
+    padding: 10px 20px;
+    transition: 200ms, transform 300ms cubic-bezier(0.14, 1.02, 0.17, 0.03),backdrop-filter,-webkit-backdrop-filter 0ms;
+}
+
+#info>.tit{
+    font-size: 50px;
+    margin: 0;
+}
+
+#info>list>a{
+    padding: 5px 20px;
+}
+
+#info>list>a:hover{
+    background-color: var(--hover-b);
+}
+
+#footer{
+    position: absolute;
+    top: calc(var(--ph) *2);
+    width: 100%;
+    background-color: #222;
+    color: #eee;
+    padding: 30px 20px 20px 20px;
+}
