@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">扶摇报</title>
+    <link rel="stylesheet" href="view.css">
+    <base target="_blank">
+</head>
+<body>
+	<script src="jq.min.js"></script>
+    <script>
+        var r = window.location.search.substr(1).match(/(^|&)issue=([^&]*)(&|$)/);
+        if (r != null) r=unescape(r[2])
+        else{
+            alert('什么鬼东西啊，我不理解...');
+        }
+        $.getJSON(`things/${r}/info.json`).then(res=>{
+            $('.title').text(res.title);
+            res.pics.forEach(p => {
+                let x=p.match(/<(\d+):(\d+)>/);
+                if(x)
+                    for (let i = x[1]-0; i <= x[2]-0; i++){
+                        $('#content')[0].innerHTML+=`<img src="things/${r}/${p.replace(x[0],i)}" class="def">`;       
+                    }
+                else{
+                    $('#content')[0].innerHTML+=`<img src="things/${r}/${p}" class="def">`; 
+                }
+            });
+        });
+    </script>
+    <div id="tit">
+        <p class="title"></p>
+    </div>
+    <div id="content">
+        
+    </div>
+    <div id="footer">
+        临时网站，制作不佳请谅解(目前仅适配电脑版，手机端开"桌面版网页"凑合着看吧)<br>
+        扶摇报主编：谭景元<br>
+        网站制作：谭景元<br>
+        网站白嫖来源：github，非常感谢<br>
+        项目地址：<a href="https://github.com/fuyaobao/fuyaobao.github.io" class="a jump">https://github.com/fuyaobao/fuyaobao.github.io</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

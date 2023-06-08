@@ -1,0 +1,43 @@
+@import url('base.css');
+
+#tit{
+    width: calc(100% + 40px);
+    background-color: #ffffff20;
+    position: fixed;
+    height: 90px;
+    backdrop-filter: blur(20px) saturate(1.3);
+    display: block;
+    margin-top: -20px;
+    margin-left: -20px;
+    padding: 30px 20px 0 40px;
+    border-bottom: 2px solid #7f7f7f50;
+    box-shadow: 0 3px 18px #66666650;
+    z-index: 1;
+}
+
+#tit>.title{
+    font-size: 30px;
+    margin: 0;
+}
+
+#footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #eee;
+    padding: 30px 20px 20px 20px;
+    margin-top: 90px;
+}
+
+#content{
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#content>img.def{
+    width: calc(50% - 20px);
+}
