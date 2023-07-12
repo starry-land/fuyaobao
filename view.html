@@ -21,7 +21,7 @@
                 let x=p.match(/<(\d+):(\d+)>/);
                 if(x)
                     for (let i = x[1]-0; i <= x[2]-0; i++){
-                        $('#content')[0].innerHTML+=`<img src="things/${r}/${p.replace(x[0],i)}" class="def">`;       
+                        $('#content')[0].innerHTML+=`<img src="things/${r}/${p.replace(x[0],i)}" class="def" loading="lazy">`;       
                     }
                 else{
                     $('#content')[0].innerHTML+=`<img src="things/${r}/${p}" class="def">`; 
@@ -31,6 +31,7 @@
     </script>
     <div id="tit">
         <p class="title"></p>
+        <p>提示：若某图片显示无法加载，请右键图片点击加载映像，谢谢</p>
     </div>
     <div id="content">
         
