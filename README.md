@@ -12,7 +12,7 @@
 
 ## 目录
 
-具体内容详见[此页面](https://fuyaobao.github.io/)
+具体内容详见[此页面](https://starry-land.github.io/fuyaobao)
 
-- 第一期: 扶摇风起 (尽请期待...)
+- 第一期: 扶摇风起
 - 第二期: 星阑耀生 (尽请期待...)
