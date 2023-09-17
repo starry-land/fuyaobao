@@ -13,7 +13,7 @@
         var r = window.location.search.substr(1).match(/(^|&)issue=([^&]*)(&|$)/);
         if (r != null) r=unescape(r[2])
         else{
-            alert('什么鬼东西啊，我不理解...');
+            alert('一些小问题，不必介意，还请刷新试试');
         }
         $.getJSON(`things/${r}/info.json`).then(res=>{
             $('.title').text(res.title);
@@ -31,17 +31,18 @@
     </script>
     <div id="tit">
         <p class="title"></p>
-        <p>提示：若某图片显示无法加载，请右键图片点击加载映像，谢谢</p>
+        <p>若某些图片加载失败，请右键图片点击加载映像以重新加载</p>
     </div>
     <div id="content">
         
     </div>
     <div id="footer">
         临时网站，制作不佳请谅解(目前仅适配电脑版，手机端开"桌面版网页"凑合着看吧)<br>
-        扶摇报主编：谭景元<br>
-        网站制作：谭景元<br>
+        图片加载速度极慢，可以写一会儿作业<br>
+        扶摇报主编：星源<br>
+        网站制作：星源<br>
         网站白嫖来源：github，非常感谢<br>
-        项目地址：<a href="https://github.com/fuyaobao/fuyaobao.github.io" class="a jump">https://github.com/fuyaobao/fuyaobao.github.io</a>
+        项目地址：Github <a href="https://github.com/fuyaobao/fuyaobao.github.io" class="a jump">fuyaobao/fuyaobao.github.io</a>
     </div>
     <script src="index.js"></script>
 </body>
